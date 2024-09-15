@@ -18,25 +18,24 @@
     gap: 0.5rem;
 }
 
-.titles>h5 {
+.titles > h5 {
     color: #777;
     font-size: 18px;
     font-weight: 500;
 }
 
-.titles>h2 {
+.titles > h2 {
     color: #333;
     font-size: 28px;
 }
 
-.wrapper>.options {
+.wrapper > .options {
     width: 100%;
     padding: 1.25rem 1.5rem;
     border-radius: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* copy & paste */
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
     backdrop-filter: blur(20px);
@@ -45,7 +44,7 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.options>select {
+.options > select {
     height: 40px;
     min-width: 160px;
     max-width: 200px;
@@ -59,17 +58,17 @@
     cursor: pointer;
 }
 
-.options>select:first-child {
+.options > select:first-child {
     color: #fff;
 }
 
-.options>.rangeInput {
+.options > .rangeInput {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.options> .searchBtn {
+.options > .searchBtn {
     outline: none;
     border: none;
     width: 40px;
@@ -77,7 +76,8 @@
     cursor: pointer;
     background-color: transparent;
 }
-.options > .searchBtn > .searchIcon{
+
+.options > .searchBtn > .searchIcon {
     border: 1px solid transparent;
     border-radius: 50%;
     padding: 0.6rem;
@@ -87,15 +87,14 @@
     fill: #fff;
 }
 
-.options> .searchBtn:active > .searchIcon{
+.options > .searchBtn:active > .searchIcon {
     border: 1px solid rgb(7, 3, 73);
     fill: rgb(7, 3, 73);
     background: #fff;
 }
 
-
 /* individual property css */
-.properties{
+.properties {
     margin-top: 3rem;
     width: 100%;
     display: flex;
@@ -103,7 +102,7 @@
     gap: 5rem;
 }
 
-.noProperty{
+.noProperty {
     text-align: center;
     margin-top: 5rem;
     font-size: 36px;
@@ -112,19 +111,113 @@
 
 /* RESPONSIVE */
 
+/* For devices with a max-width of 992px (tablets, small laptops) */
 @media only screen and (max-width: 992px) {
-    .wrapper>.options{
+    .wrapper > .options {
         width: 90%;
         padding: 0.75rem 1rem;
         margin: 0 auto;
+        flex-direction: column;
+        gap: 1rem;
     }
 
-    .properties{
-       justify-content: center;
+    .properties {
+        justify-content: center;
+    }
+
+    .titles > h2 {
+        font-size: 24px;
+    }
+
+    .options > select {
+        width: 100%;
+    }
+
+    .options > .searchBtn {
+        width: 50px;
+        height: 50px;
     }
 }
 
-
+/* For devices with a max-width of 768px (tablets, large smartphones) */
 @media only screen and (max-width: 768px) {
-    
+    .wrapper {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .titles > h5 {
+        font-size: 16px;
+    }
+
+    .titles > h2 {
+        font-size: 22px;
+    }
+
+    .wrapper > .options {
+        width: 95%;
+        padding: 0.5rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .options > select {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .options > .rangeInput {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .options > .searchBtn {
+        width: 45px;
+        height: 45px;
+    }
+
+    .properties {
+        gap: 2rem;
+    }
+}
+
+/* For devices with a max-width of 480px (smartphones) */
+@media only screen and (max-width: 480px) {
+    .container {
+        margin-top: 1.5rem;
+    }
+
+    .titles > h5 {
+        font-size: 14px;
+    }
+
+    .titles > h2 {
+        font-size: 20px;
+    }
+
+    .wrapper > .options {
+        width: 100%;
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .options > select {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .options > .searchBtn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .properties {
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .noProperty {
+        font-size: 28px;
+    }
 }

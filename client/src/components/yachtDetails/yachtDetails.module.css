@@ -2,262 +2,141 @@
     min-height: calc(100vh - 60px);
     width: 100%;
     margin-top: 5rem;
+    padding: 0 1rem; /* Add some padding for small screens */
 }
 
 .wrapper {
     height: 100%;
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
-    gap: 5rem;
+    flex-direction: column; /* Stack columns vertically on small screens */
+    gap: 2rem;
+}
+
+.left, .right {
+    height: auto; /* Allow height to adjust based on content */
+    width: 100%;
 }
 
 .left {
-    height: 450px;
-    width: 50%;
+    height: 300px; /* Reduced height for smaller screens */
 }
 
-.left>img {
+.left > img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .right {
-    height: 450px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
 }
 
 .top {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Stack top items on small screens */
+    gap: 1rem;
 }
 
 .actions {
-    margin-left: 5rem;
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1rem;
+    margin: 0; /* Adjust margin for smaller screens */
 }
 
-.actions> :first-child {
-    text-decoration: none;
-    padding: 0.25rem 0.75rem;
+.actions > :first-child, .actions > :last-child {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size for buttons */
+}
+
+.actions > :first-child {
     background-color: green;
-    color: #fff;
-    border-radius: 8px;
-    cursor: pointer;
 }
 
-.actions> :last-child {
-    padding: 0.25rem 0.75rem;
+.actions > :last-child {
     background-color: #f00;
-    color: #fff;
-    border-radius: 8px;
-    cursor: pointer;
 }
 
-.location {
-    margin-top: 3rem;
-    margin-bottom: 1.25rem;
-    font-size: 18px;
-    color: #222;
-    text-transform: capitalize;
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-}
-
-.location>span {
-    padding: 0.25rem 0.75rem;
-    background-color: blue;
-    color: #fff;
-    border-radius: 8px;
-}
-
-.price {
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    color: #222;
-    font-size: 18px;
-    margin-bottom: 3rem;
-}
-
-.price>span {
+.location, .price, .metersLong {
+    margin-top: 1rem; /* Adjust margins for small screens */
     font-size: 16px;
-}
-
-.passengers {
     display: flex;
-    align-items: center;
-    gap: 1.5rem;
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: flex-start;
 }
 
-.passengers>span {
-    padding: 0.25rem 0.75rem;
+.location > span, .price > span, .metersLong > span {
     background-color: blue;
     color: #fff;
+    padding: 0.25rem 0.75rem;
     border-radius: 8px;
 }
 
 .descContainer {
-    margin-top: 3rem;
+    margin-top: 1rem;
     display: flex;
-    gap: 1.25rem;
-    align-items: center;
-    font-size: 18px;
-}
-
-.descContainer>p {
-    color: #333;
+    flex-direction: column; /* Stack description container vertically on small screens */
+    gap: 1rem;
     font-size: 16px;
 }
 
 .ownerDetails {
-    margin-top: 5rem;
+    margin-top: 2rem; /* Adjust margin for smaller screens */
     display: flex;
-    align-items: center;
-    gap: 2.5rem;
+    flex-direction: column; /* Stack owner details vertically on small screens */
+    gap: 1rem;
 }
 
-.ownerDetails>span {
-    font-size: 20px;
-    color: #333;
+.ownerDetails > span {
+    font-size: 18px;
 }
 
 .ownerDetails button {
-    outline: none;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.25rem 0.75rem;
-    background-color: blue;
-    color: #fff;
-    font-size: 17px;
-    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
 }
 
-.ownerDetails>button:hover {
-    border-color: blue;
-    color: blue;
-    background-color: #fff;
-}
-
-.metersLong{
-    margin-top: 2rem;
-    font-size: 17px;
-    color: #333;
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-}
-
-.metersLong > span{
-    background-color: blue;
-    color: #fff;
-    padding: 0.25rem 0.75rem;
-    border-radius: 8px;
-}
-
-.contactBookmarkControls {
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-}
-
-.contactForm {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-height: 100vh;
-    min-width: 100vw;
-    max-height: 100%;
-    max-width: 100%;
-    background-color: rgba(0, 0, 0, 0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.success, .error {
     z-index: 999999999999;
-}
-
-.contactFormWrapper {
-    position: relative;
-    background-color: #fff;
-    height: 65vh;
-    width: 25vw;
-    border-radius: 20px;
-}
-
-.contactFormWrapper>h2 {
-    text-align: center;
-    margin: 2.5rem 0;
-    margin-bottom: 3.5rem;
-}
-
-.contactFormWrapper>form>div>label {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 18px;
-    margin-right: 1rem;
-}
-
-.contactFormWrapper button {
-    margin-top: 0.5rem;
-}
-
-.removeIcon {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-.success {
-    z-index: 999999999999;
-    height: 70px;
-    width: 250px;
+    height: auto; /* Allow height to adjust based on content */
+    width: auto;
+    max-width: 90vw; /* Ensure the alert doesn't exceed screen width */
     text-align: center;
     border-radius: 20px;
     line-height: 1.5rem;
-    padding: 1.5rem;
-    background-color: green;
-    color: #fff;
-    position: absolute;
-    top: 5rem;
-    right: 5rem;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.error {
-    height: 70px;
-    width: 250px;
-    text-align: center;
-    border-radius: 20px;
-    line-height: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #f00;
-    color: #fff;
+    padding: 1rem;
     position: fixed;
     top: 5rem;
     right: 5rem;
     font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.success {
+    background-color: green;
+    color: #fff;
+}
+
+.error {
+    background-color: #f00;
+    color: #fff;
 }
 
 .commentSection {
-    margin: 0 auto;
-    margin-top: 12.5rem;
-    width: 50%;
+    margin: 1rem auto; /* Adjust margin for small screens */
+    width: 100%;
+    max-width: 600px; /* Limit the max width */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -271,44 +150,105 @@
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
     border-bottom: 1px solid #555;
 }
 
-.commentInput>img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%;
+.commentInput > img {
+    width: 40px; /* Adjust size for small screens */
+    height: 40px;
 }
 
-.commentInput>input {
+.commentInput > input {
     flex: 1;
     outline: none;
     border: none;
-    padding: 0.25rem;
+    padding: 0.5rem;
     border-bottom: 1px solid #555;
 }
 
-.commentInput>button {
+.commentInput > button {
     outline: none;
     border: none;
     background-color: #0707b5;
     color: #fff;
-    padding: 0.25rem 0.75rem;
+    padding: 0.5rem 1rem;
     border-radius: 8px;
-    font-size: 17px;
+    font-size: 15px; /* Smaller font size for buttons */
     cursor: pointer;
 }
 
 .comments {
-    max-height: 300px;
+    max-height: 200px; /* Adjust height for small screens */
     overflow: auto;
-    margin-top: 1.25rem;
+    margin-top: 1rem;
     width: 100%;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+}
+
+/* Responsive adjustments */
+
+/* Medium screens (tablets and small laptops) */
+@media (max-width: 992px) {
+    .wrapper {
+        flex-direction: column; /* Stack the left and right sections vertically */
+        gap: 2rem;
+    }
+
+    .left, .right {
+        height: auto; /* Allow height to adjust based on content */
+        width: 100%;
+    }
+
+    .actions {
+        flex-direction: column; /* Stack action buttons vertically */
+        gap: 1rem;
+    }
+
+    .commentSection {
+        width: 90%;
+        max-width: 100%;
+    }
+}
+
+/* Small screens (large mobile phones and small tablets) */
+@media (max-width: 768px) {
+    .left {
+        height: 250px; /* Adjust image height for small screens */
+    }
+
+    .actions {
+        flex-direction: column; /* Stack action buttons vertically */
+        gap: 0.5rem;
+    }
+
+    .ownerDetails {
+        gap: 0.5rem;
+    }
+}
+
+/* Extra small screens (mobile phones) */
+@media (max-width: 576px) {
+    .left {
+        height: 200px; /* Further reduce image height */
+    }
+
+    .commentInput > img {
+        width: 30px; /* Smaller profile image */
+        height: 30px;
+    }
+
+    .commentInput > button {
+        padding: 0.5rem 1rem;
+        font-size: 14px; /* Smaller button font size */
+    }
+
+    .comments {
+        max-height: 150px; /* Adjust comments section height for very small screens */
+        gap: 0.5rem;
+    }
 }

@@ -20,9 +20,10 @@
     display: flex;
     flex-direction: column;
     background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.wrapper>h2 {
+.wrapper > h2 {
     color: #171097;
     text-align: center;
     margin: 2.5rem 0;
@@ -36,14 +37,14 @@ form {
     gap: 42px;
 }
 
-form>input {
+form > input {
     width: 50%;
     outline: none;
     border: none;
     border-bottom: 1px solid #333;
 }
 
-form>label {
+form > label {
     align-self: center;
     width: 50%;
     cursor: pointer;
@@ -53,11 +54,11 @@ form>label {
     gap: 12px;
 }
 
-form>label:hover {
+form > label:hover {
     color: #444;
 }
 
-form>button {
+form > button {
     outline: none;
     background-color: blue;
     color: #fff;
@@ -68,13 +69,13 @@ form>button {
     border: 1px solid transparent;
 }
 
-form>button:hover {
+form > button:hover {
     background-color: #fff;
     border-color: blue;
     color: blue;
 }
 
-form>p {
+form > p {
     text-align: center;
     color: black;
     display: flex;
@@ -82,7 +83,7 @@ form>p {
     justify-content: center;
 }
 
-form>p>a {
+form > p > a {
     text-decoration: none;
     font-size: 17px;
     color: #888;
@@ -102,21 +103,85 @@ form>p>a {
     top: 5rem;
     right: 5rem;
     font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* RESPONSIVE */
 
+/* Tablets and smaller laptops */
 @media only screen and (max-width: 992px) {
     .wrapper {
-        height: 60vh;
-        width: 30vw;
+        height: 65vh;
+        width: 35vw;
+    }
+
+    form > input, form > label {
+        width: 70%;
     }
 }
 
-
+/* Tablets and medium devices */
 @media only screen and (max-width: 768px) {
     .wrapper {
-        height: 80vh;
+        height: 70vh;
         width: 50vw;
+    }
+
+    form > input, form > label {
+        width: 80%;
+    }
+
+    .wrapper > h2 {
+        font-size: 30px;
+    }
+
+    form > button {
+        font-size: 16px;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Mobile phones */
+@media only screen and (max-width: 576px) {
+    .wrapper {
+        height: 80vh;
+        width: 75vw;
+    }
+
+    .wrapper > h2 {
+        font-size: 24px;
+        margin: 2rem 0;
+    }
+
+    form > input, form > label {
+        width: 90%;
+    }
+
+    form > button {
+        padding: 0.4rem 0.75rem;
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+
+/* Extra small mobile phones */
+@media only screen and (max-width: 400px) {
+    .wrapper {
+        height: 90vh;
+        width: 85vw;
+    }
+
+    .wrapper > h2 {
+        font-size: 22px;
+    }
+
+    form > button {
+        padding: 0.35rem 0.65rem;
+        font-size: 14px;
     }
 }

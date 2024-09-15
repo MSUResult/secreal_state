@@ -19,7 +19,7 @@ const Properties = () => {
 
   // fetch all properties
   useEffect(() => {
-    const fetchAllProperties = async() => {
+    const fetchAllProperties = async () => {
       const data = await request(`/property/getAll`, 'GET')
       setAllProperties(data)
     }
@@ -91,9 +91,9 @@ const Properties = () => {
         <div className={classes.options}>
           <select value={state?.type} name="type" onChange={handleState}>
             <option disabled>Select type</option>
-            <option value="beach">Beach</option>
-            <option value="mountain">Mountain</option>
-            <option value="village">Village</option>
+            <option value="buy">Buy</option>
+            <option value="rent">Rent</option>
+            <option value="sale">Sale</option>
           </select>
           <select value={state?.priceRange} name="priceRange" onChange={handleState}>
             <option disabled>Select Price Range</option>
@@ -104,13 +104,13 @@ const Properties = () => {
             <option value="4">400,000-500,000</option>
           </select>
           <select value={state?.continent} name="continent" onChange={handleState}>
-            <option disabled>Select Continent</option>
-            <option value="0">Europe</option>
-            <option value="1">Asia</option>
-            <option value="2">Africa</option>
-            <option value="3">South America</option>
-            <option value="4">North America</option>
-            <option value="5">Oceania</option>
+          <option disabled>Select Area</option>
+            <option value="0">Madhav Nagar</option>
+            <option value="1">Malhipur Road</option>
+            <option value="2">Delhi Road</option>
+            <option value="3">Ambala Road</option>
+            <option value="4">Janta Road</option>
+            <option value="5">Any Loacation</option>
           </select>
           <button className={classes.searchBtn}>
             <AiOutlineSearch className={classes.searchIcon} onClick={handleSearch} />
@@ -124,7 +124,7 @@ const Properties = () => {
             </div>
             <div className={classes.properties}>
               {filteredProperties.map((property) => (
-                <PropertyCard key={property._id} property={property}/>
+                <PropertyCard key={property._id} property={property} />
               ))}
             </div>
           </> : <h2 className={classes.noProperty}>We have no properties with the specified options.</h2>}

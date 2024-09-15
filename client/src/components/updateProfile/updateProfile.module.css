@@ -58,3 +58,65 @@ form .inputBoxImage label {
     justify-content: space-between;
     align-items: flex-end;
 }
+
+/* Responsive adjustments */
+
+/* Medium screens (tablets and small laptops) */
+@media (max-width: 992px) {
+    .wrapper>form {
+        width: 50%; /* Adjust width to 50% for medium screens */
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .wrapper>form>input {
+        width: 90%; /* Increase input width for better usability */
+    }
+}
+
+/* Small screens (large mobile phones and small tablets) */
+@media (max-width: 768px) {
+    .wrapper>form {
+        width: 65%; /* Make form wider for smaller screens */
+        padding: 1.5rem;
+    }
+
+    .wrapper>form>input {
+        width: 100%; /* Full-width input for mobile */
+    }
+
+    .error {
+        top: 2rem; /* Adjust error message position */
+        right: 2rem;
+    }
+}
+
+/* Extra small screens (mobile phones) */
+@media (max-width: 576px) {
+    .wrapper>form {
+        width: 80%; /* Almost full width on mobile */
+        padding: 1rem;
+    }
+
+    .wrapper>form>input {
+        width: 100%; /* Ensure inputs take up the full width */
+    }
+
+    form .inputBoxImage label {
+        flex-direction: column; /* Stack the label and input for better alignment */
+        align-items: center;
+    }
+}
+
+/* Extra-extra small screens (very small mobile phones) */
+@media (max-width: 400px) {
+    .wrapper>form {
+        width: 95%; /* Nearly full width for very small screens */
+    }
+
+    .error {
+        width: 90%; /* Make error message width more responsive */
+        top: 1rem;
+        right: 1rem;
+    }
+}

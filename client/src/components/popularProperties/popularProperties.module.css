@@ -33,7 +33,8 @@
   margin-top: 3rem;
   display: flex;
   flex-wrap: wrap;
-  grid-gap: 3rem;
+  gap: 3rem;
+  justify-content: space-between;
 }
 
 .property {
@@ -43,8 +44,6 @@
   transform: rotate(-1deg);
   border-radius: 10px 50px 10px 50px;
   box-shadow: -5px 5px 19px -5px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: -5px 5px 19px -5px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: -5px 5px 19px -5px rgba(0, 0, 0, 0.3);
   text-decoration: none;
   transition: 150ms all;
 }
@@ -99,23 +98,23 @@
   transition: 150ms all;
 }
 
-
 .property:hover>.quantity {
   transform: rotate(0);
 }
 
-/* RESPONSIVEE */
+/* Responsive Adjustments */
 @media only screen and (max-width: 992px) {
   .properties {
     justify-content: center;
   }
 
-  .properties>.property>img {
-    width: 450px;
+  .property {
+    width: 45%; /* Adjusted width for tablets */
   }
 
-  .property {
-    width: 50%
+  .properties>.property>img {
+    width: 100%;
+    height: auto; /* Make image height auto for better aspect ratio */
   }
 
   .container {
@@ -125,6 +124,33 @@
 
 @media only screen and (max-width: 768px) {
   .property {
-    width: 65%
+    width: 65%; /* Adjust width for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .property {
+    width: 100%; /* Full width for mobile screens */
+  }
+
+  .properties>.property>img {
+    height: 250px; /* Adjust image height for small screens */
+  }
+
+  .titles>h2 {
+    font-size: 24px; /* Reduce title size for mobile */
+  }
+
+  .titles>h5 {
+    font-size: 16px; /* Reduce subtitle size for mobile */
+  }
+
+  .property>h5 {
+    font-size: 18px; /* Reduce font size of property titles on mobile */
+  }
+
+  .property>.quantity {
+    font-size: 16px; /* Adjust quantity text size */
+    padding: 0.3rem 1rem;
   }
 }

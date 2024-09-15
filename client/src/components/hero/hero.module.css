@@ -1,4 +1,4 @@
-.container{
+.container {
     height: calc(100vh - 60px);
     width: 100%;
     background-image: url('../../assets/estate.jpg');
@@ -7,7 +7,7 @@
     background-blend-mode: darken;
 }
 
-.wrapper{
+.wrapper {
     max-width: 1180px;
     margin: 0 auto;
     height: 100%;
@@ -15,9 +15,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center; /* Center-align text for smaller devices */
 }
 
-.wrapper > h2{
+.wrapper > h2 {
     font-size: 46px;
     font-weight: bold;
     color: #fff;
@@ -25,13 +26,13 @@
     margin-bottom: 2.5rem;
 }
 
-.wrapper > h5{
+.wrapper > h5 {
     color: #efefef;
-    font-size: 36px; 
+    font-size: 36px;
     margin-bottom: 3rem;
 }
 
-.wrapper > .options{
+.wrapper > .options {
     width: 70%;
     background-color: #fff;
     padding: 1.25rem 1.5rem;
@@ -39,9 +40,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap; /* Allows elements to stack on small screens */
+    gap: 1rem; /* Add gap between elements */
 }
 
-.options > select{
+.options > select {
     height: 40px;
     min-width: 160px;
     max-width: 200px;
@@ -55,17 +58,17 @@
     cursor: pointer;
 }
 
-.options > select:first-child{
+.options > select:first-child {
     color: #fff;
 }
 
-.options > .rangeInput{
+.options > .rangeInput {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.options > .searchIcon{
+.options > .searchIcon {
     padding: 0.6rem;
     width: 40px;
     height: 40px;
@@ -75,18 +78,85 @@
     cursor: pointer;
 }
 
-/* RESPONSIVEE */
+/* RESPONSIVE */
+
+/* Tablets (768px and below) */
 @media only screen and (max-width: 768px) {
-    .wrapper > h2{
+    .wrapper > h2 {
         font-size: 40px;
     }
     
-    .wrapper > h5{
-        font-size: 30px; 
+    .wrapper > h5 {
+        font-size: 30px;
     }
 
-    .wrapper > .options{
+    .wrapper > .options {
         width: 90%;
+        flex-direction: column; /* Stack elements vertically */
+        gap: 1.5rem; /* Increase spacing */
+    }
+
+    .options > select {
+        width: 100%; /* Full width on smaller screens */
+        font-size: 16px;
     }
 }
-    
+
+/* Mobile (480px and below) */
+@media only screen and (max-width: 480px) {
+    .wrapper > h2 {
+        font-size: 32px;
+        margin-bottom: 2rem;
+    }
+
+    .wrapper > h5 {
+        font-size: 24px;
+        margin-bottom: 2rem;
+    }
+
+    .wrapper > .options {
+        width: 100%;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .options > select {
+        width: 100%;
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+
+    .options > .searchIcon {
+        width: 35px;
+        height: 35px;
+        padding: 0.5rem;
+    }
+}
+
+/* Extra small devices (320px and below) */
+@media only screen and (max-width: 320px) {
+    .wrapper > h2 {
+        font-size: 28px;
+        margin-bottom: 1.5rem;
+    }
+
+    .wrapper > h5 {
+        font-size: 20px;
+        margin-bottom: 1.5rem;
+    }
+
+    .wrapper > .options {
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    .options > select {
+        font-size: 12px;
+        padding: 0.4rem;
+    }
+
+    .options > .searchIcon {
+        width: 30px;
+        height: 30px;
+    }
+}

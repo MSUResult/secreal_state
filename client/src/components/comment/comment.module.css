@@ -31,11 +31,68 @@
     gap: 0.25rem;
 }
 
-.timeago{
+.timeago {
     font-size: 15px;
     color: #555;
 }
 
-.trashIcon{
+.trashIcon {
     cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .left>img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .timeago {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 95%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .left {
+        gap: 1rem;
+    }
+
+    .left>img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .left>.userData {
+        gap: 0.2rem;
+    }
+
+    .timeago {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left>img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .timeago {
+        font-size: 12px;
+    }
+
+    .trashIcon {
+        font-size: 16px;
+    }
 }

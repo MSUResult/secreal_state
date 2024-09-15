@@ -19,13 +19,13 @@ footer {
     gap: 0.5rem;
 }
 
-.col>h2 {
+.col > h2 {
     margin-bottom: 15px;
     justify-self: flex-start;
     margin-left: -5px;
 }
 
-.col>p {
+.col > p {
     max-width: 425px;
     color: #555;
     font-size: 15px;
@@ -35,26 +35,79 @@ footer {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
-    footer{
+    footer {
         padding-top: 100px;
     }
-    
-    .wrapper{
+
+    .wrapper {
         align-items: flex-start;
         gap: 1.25rem;
     }
-    
+
     .col:nth-child(2) {
         font-size: 15px;
         gap: 0.3rem;
     }
- 
-    .col>h2 {
+
+    .col > h2 {
         font-size: 18px;
         font-weight: 600;
     }
-    
-    .col>p {
+
+    .col > p {
         max-width: 325px;
+    }
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media only screen and (max-width: 768px) {
+    footer {
+        height: auto;
+        padding-top: 80px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        width: 95%;
+    }
+
+    .col > h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .col > p {
+        max-width: 100%;
+        font-size: 14px;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media only screen and (max-width: 480px) {
+    footer {
+        height: auto;
+        padding-top: 60px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        width: 100%;
+        gap: 2.5rem;
+    }
+
+    .col > h2 {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .col > p {
+        max-width: 100%;
+        font-size: 13px;
+    }
+
+    .col {
+        gap: 0.2rem;
     }
 }

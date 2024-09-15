@@ -13,11 +13,11 @@
     align-items: center;
 }
 
-.wrapper>h2 {
+.wrapper > h2 {
     margin-bottom: 2.5rem;
 }
 
-.wrapper>form {
+.wrapper > form {
     width: 75%;
 }
 
@@ -39,7 +39,7 @@
     align-items: center;
 }
 
-.wrapper>form>select {
+.wrapper > form > select {
     display: flex;
     justify-content: flex-start;
     background-color: white;
@@ -47,4 +47,79 @@
     outline: none;
     padding: 0.5rem 0.25rem;
     width: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .wrapper {
+        max-width: 90%;
+    }
+
+    .wrapper > form {
+        width: 80%;
+    }
+
+    .wrapper > form > select {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 5rem;
+    }
+
+    .wrapper {
+        max-width: 95%;
+    }
+
+    .wrapper > form {
+        width: 85%;
+    }
+
+    .wrapper > h2 {
+        font-size: 22px;
+    }
+
+    .wrapper > form > select {
+        width: 70%;
+        padding: 0.5rem;
+    }
+
+    .error {
+        width: 200px;
+        padding: 0.5rem 1rem;
+        top: 4rem;
+        right: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-top: 3rem;
+    }
+
+    .wrapper {
+        max-width: 100%;
+    }
+
+    .wrapper > form {
+        width: 95%;
+    }
+
+    .wrapper > h2 {
+        font-size: 18px;
+    }
+
+    .wrapper > form > select {
+        width: 80%;
+        padding: 0.4rem;
+    }
+
+    .error {
+        width: 180px;
+        padding: 0.4rem 0.8rem;
+        top: 2rem;
+        right: 1rem;
+    }
 }

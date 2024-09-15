@@ -1,10 +1,10 @@
-.container{
+.container {
     height: calc(100vh - 60px);
     width: 100%;
     margin-top: 5rem;
 }
 
-.wrapper{
+.wrapper {
     width: 85%;
     height: 100%;
     margin: 0 auto;
@@ -13,13 +13,13 @@
     align-items: center;
 }
 
-.wrapper > h3{
+.wrapper > h3 {
     font-size: 24px;
     color: #333;
     margin-bottom: 1.25rem;
 }
 
-.wrapper > form{
+.wrapper > form {
     border: 1px solid #999;
     border-radius: 20px;
     padding: 1.75rem;
@@ -30,7 +30,7 @@
     gap: 2.5rem;
 }
 
-form > .inputBox{
+form > .inputBox {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -41,14 +41,14 @@ form .inputBoxImage {
     width: 100%;
 }
 
-form .inputBoxImage label{
+form .inputBoxImage label {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.inputBox > input{
+.inputBox > input {
     border: none;
     outline: none;
     border-bottom: 1px solid #999;
@@ -70,4 +70,67 @@ form .inputBoxImage label{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .wrapper > form {
+        width: 40%;
+        padding: 1.5rem;
+    }
+
+    .wrapper > h3 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 95%;
+    }
+
+    .wrapper > form {
+        width: 60%;
+        padding: 1.25rem;
+        gap: 2rem;
+    }
+
+    .wrapper > h3 {
+        font-size: 20px;
+    }
+
+    .inputBox > input {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .wrapper > form {
+        width: 85%;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .wrapper > h3 {
+        font-size: 18px;
+    }
+
+    .inputBox > input {
+        font-size: 12px;
+    }
+
+    .error {
+        width: 200px;
+        padding: 0.5rem 1rem;
+        top: 3rem;
+        right: 2rem;
+    }
 }

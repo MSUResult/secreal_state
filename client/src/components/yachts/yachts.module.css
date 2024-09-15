@@ -18,13 +18,13 @@
     margin-bottom: 2.5em;
 }
 
-.titles>h5 {
+.titles > h5 {
     color: #777;
     font-weight: 500;
     font-size: 17px;
 }
 
-.titles>h2 {
+.titles > h2 {
     color: #333;
     font-size: 32px;
 }
@@ -33,4 +33,51 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 3rem;
+}
+
+/* Responsive adjustments */
+
+/* Medium screens (tablets and small laptops) */
+@media (max-width: 992px) {
+    .yachts {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+
+    .titles > h2 {
+        font-size: 28px; /* Adjust font size for headings */
+    }
+
+    .titles > h5 {
+        font-size: 15px; /* Adjust font size for subheadings */
+    }
+}
+
+/* Small screens (large mobile phones and small tablets) */
+@media (max-width: 768px) {
+    .yachts {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    }
+
+    .titles > h2 {
+        font-size: 24px; /* Adjust font size for headings */
+    }
+
+    .titles > h5 {
+        font-size: 14px; /* Adjust font size for subheadings */
+    }
+}
+
+/* Extra small screens (mobile phones) */
+@media (max-width: 576px) {
+    .yachts {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+
+    .titles > h2 {
+        font-size: 20px; /* Adjust font size for headings */
+    }
+
+    .titles > h5 {
+        font-size: 12px; /* Adjust font size for subheadings */
+    }
 }

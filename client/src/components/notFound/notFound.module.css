@@ -1,10 +1,10 @@
-.container{
+.container {
     margin-top: 2rem;
     height: calc(50vh - 60px);
     width: 100%;
 }
 
-.wrapper{
+.wrapper {
     width: 85%;
     height: 100%;
     margin: 0 auto;
@@ -14,13 +14,67 @@
     gap: 1.25rem;
 }
 
-.wrapper > h2{
+.wrapper > h2 {
     font-size: 32px;
     color: #444;
 }
 
-.wrapper > a{
+.wrapper > a {
     text-decoration: none;
     color: #333;
     font-size: 24px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For devices with max width of 1024px (tablets, small laptops) */
+@media (max-width: 1024px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .wrapper > h2 {
+        font-size: 28px;
+    }
+
+    .wrapper > a {
+        font-size: 22px;
+    }
+}
+
+/* For devices with max width of 768px (tablets, large smartphones) */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 95%;
+    }
+
+    .wrapper > h2 {
+        font-size: 24px;
+    }
+
+    .wrapper > a {
+        font-size: 20px;
+    }
+}
+
+/* For devices with max width of 480px (smartphones) */
+@media (max-width: 480px) {
+    .container {
+        margin-top: 1rem;
+        height: calc(50vh - 50px);
+    }
+
+    .wrapper {
+        width: 100%;
+        padding: 0 10px;
+        gap: 1rem;
+    }
+
+    .wrapper > h2 {
+        font-size: 20px;
+    }
+
+    .wrapper > a {
+        font-size: 18px;
+    }
 }

@@ -18,24 +18,24 @@
     gap: 0.5rem;
 }
 
-.imgContainer{
+.imgContainer {
     width: 100%;
     height: 250px;
 }
 
-.imgContainer > img{
+.imgContainer > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
 
-.title{
+.title {
     margin-top: 0.25rem;
     text-transform: capitalize;
 }
 
-.priceAndMaxPassengers{
+.priceAndMaxPassengers {
     margin-top: 0.5rem;
     width: 100%;
     display: flex;
@@ -43,9 +43,76 @@
     align-items: center;
 }
 
-.passengers{
+.passengers {
     display: flex;
     align-items: center;
     gap: 0.25rem;
     color: #555;
+}
+
+/* Responsive adjustments */
+
+/* Medium screens (tablets and small laptops) */
+@media (max-width: 992px) {
+    .container {
+        padding: 0.5rem;
+        box-shadow: 8px 8px 20px -6px rgba(0, 0, 0, 0.25);
+    }
+
+    .imgContainer {
+        height: 200px;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .priceAndMaxPassengers {
+        margin-top: 0.4rem;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
+
+/* Small screens (large mobile phones and small tablets) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+        box-shadow: 6px 6px 18px -5px rgba(0, 0, 0, 0.25);
+    }
+
+    .imgContainer {
+        height: 180px;
+    }
+
+    .title {
+        font-size: 0.95rem;
+    }
+
+    .priceAndMaxPassengers {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+}
+
+/* Extra small screens (mobile phones) */
+@media (max-width: 576px) {
+    .container {
+        padding: 0.5rem;
+        box-shadow: 4px 4px 16px -4px rgba(0, 0, 0, 0.25);
+    }
+
+    .imgContainer {
+        height: 150px;
+    }
+
+    .title {
+        font-size: 0.9rem;
+    }
+
+    .priceAndMaxPassengers {
+        margin-top: 0.3rem;
+        flex-direction: column;
+        gap: 0.15rem;
+    }
 }

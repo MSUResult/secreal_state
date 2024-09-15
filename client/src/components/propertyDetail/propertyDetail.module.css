@@ -14,21 +14,19 @@
 }
 
 /* left */
-
 .left {
     flex: 1;
     height: 750px;
     width: 100%;
 }
 
-.left>img {
+.left > img {
     height: 65%;
     width: 100%;
     object-fit: cover;
 }
 
 /* right */
-
 .right {
     flex: 1;
     min-height: 750px;
@@ -53,7 +51,7 @@
     gap: 1.5rem;
 }
 
-.controls>a {
+.controls > a {
     text-decoration: none;
     padding: 0.25rem 0.75rem;
     font-size: 16px;
@@ -63,7 +61,7 @@
     cursor: pointer;
 }
 
-.controls>button {
+.controls > button {
     outline: none;
     border: none;
     padding: 0.25rem 0.75rem;
@@ -74,6 +72,7 @@
     cursor: pointer;
 }
 
+/* Price and owner section */
 .priceAndOwner .owner {
     height: 35px;
     width: 35px;
@@ -88,7 +87,7 @@
     padding: 0 0.5rem;
 }
 
-.details>.priceAndOwner {
+.details > .priceAndOwner {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -96,16 +95,17 @@
     margin-bottom: 2.5rem;
 }
 
-.priceAndOwner>.price {
+.priceAndOwner > .price {
     font-weight: bold;
     font-size: 18px;
 }
 
-.priceAndOwner>.price>span {
+.priceAndOwner > .price > span {
     font-weight: normal;
     font-size: 17px;
 }
 
+/* More details */
 .moreDetails {
     display: flex;
     align-items: center;
@@ -113,7 +113,7 @@
     margin-bottom: 3rem;
 }
 
-.moreDetails>span {
+.moreDetails > span {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -122,10 +122,11 @@
     padding-right: 1.25rem;
 }
 
-.moreDetails>span:last-child {
+.moreDetails > span:last-child {
     border: none;
 }
 
+/* Type and continent */
 .typeAndContinent {
     display: flex;
     justify-content: space-between;
@@ -134,7 +135,7 @@
     margin-bottom: 2rem;
 }
 
-.typeAndContinent>div>span {
+.typeAndContinent > div > span {
     background-color: #2500ac;
     color: #fff;
     padding: 0.4rem 1rem;
@@ -151,11 +152,12 @@
     margin: 2rem 0;
 }
 
-.desc>span {
+.desc > span {
     color: #444;
     font-size: 16px;
 }
 
+/* Contact owner button */
 .contactOwner {
     width: 25%;
     text-align: center;
@@ -175,8 +177,7 @@
     background-color: #fff;
 }
 
-/* list property */
-
+/* Contact form */
 .contactForm {
     position: absolute;
     top: 0;
@@ -198,91 +199,13 @@
     border-radius: 20px;
 }
 
-.contactFormWrapper>h2 {
+.contactFormWrapper > h2 {
     text-align: center;
     margin: 2.5rem 0;
     margin-bottom: 3.5rem;
 }
 
-.contactFormWrapper>form>div>label {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 18px;
-    margin-right: 1rem;
-}
-
-.contactFormWrapper button {
-    margin-top: 0.5rem;
-}
-
-.removeIcon {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-.contactBookmarkControls {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-}
-
-.contactBookmarkControls>* {
-    cursor: pointer;
-}
-
-.error {
-    height: 70px;
-    width: 250px;
-    text-align: center;
-    border-radius: 20px;
-    line-height: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #f00;
-    color: #fff;
-    position: fixed;
-    top: 5rem;
-    right: 5rem;
-    font-weight: 500;
-}
-
-.success {
-    z-index: 999999999999;
-    height: 70px;
-    width: 250px;
-    text-align: center;
-    border-radius: 20px;
-    line-height: 1.5rem;
-    padding: 1.5rem;
-    background-color: green;
-    color: #fff;
-    position: absolute;
-    top: 5rem;
-    right: 5rem;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-a {
-    text-decoration: none;
-}
-
-.noFuncMessage {
-    margin-top: 2.5rem;
-    font-size: 22px;
-    color: #333;
-    transition: 150ms all;
-}
-
-.noFuncMessage:hover {
-    color: #555;
-}
-
+/* Comment section */
 .commentSection {
     margin: 0 auto;
     margin-top: 5rem;
@@ -304,45 +227,7 @@ a {
     border-bottom: 1px solid #555;
 }
 
-.commentInput>img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.commentInput>input {
-    flex: 1;
-    outline: none;
-    border: none;
-    padding: 0.25rem;
-    border-bottom: 1px solid #555;
-}
-
-.commentInput>button {
-    outline: none;
-    border: none;
-    background-color: #0707b5;
-    color: #fff;
-    padding: 0.25rem 0.75rem;
-    border-radius: 8px;
-    font-size: 17px;
-    cursor: pointer;
-}
-
-.comments {
-    max-height: 300px;
-    overflow: auto;
-    margin-top: 1.25rem;
-    width: 100%;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-/* RESPONSIVE */
+/* Responsive Design */
 
 @media only screen and (max-width: 992px) {
     .left {
@@ -350,7 +235,7 @@ a {
         justify-content: flex-end;
     }
 
-    .left>img {
+    .left > img {
         width: 90%;
         height: 75%;
     }
@@ -365,8 +250,17 @@ a {
     }
 }
 
-
 @media only screen and (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
     .contactFormWrapper {
         height: 75vh;
         width: 50vw;
@@ -374,5 +268,60 @@ a {
 
     .contactOwner {
         width: 150px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .left {
+        width: 100%;
+    }
+
+    .left > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .contactFormWrapper {
+        height: 80vh;
+        width: 80vw;
+    }
+
+    .contactOwner {
+        width: 100%;
+    }
+
+    .desc {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .contactFormWrapper {
+        height: 85vh;
+        width: 90vw;
+    }
+
+    .contactOwner {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .controls > a, .controls > button {
+        font-size: 14px;
+    }
+
+    .desc {
+        font-size: 16px;
+    }
+
+    .contactOwner {
+        padding: 0.3rem 0.6rem;
     }
 }
